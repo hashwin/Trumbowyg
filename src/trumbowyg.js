@@ -1100,7 +1100,7 @@ Object.defineProperty(jQuery.trumbowyg, 'defaultOptions', {
                     };
                     wrapInlinesInParagraphsFrom(t.$ed.children(inlineElementsSelector).first());
 
-                    t.semanticTag('div', 'p', true);
+                    t.semanticTag('p', 'div', true);
 
                     // Unwrap paragraphs content, containing nothing usefull
                     t.$ed.find('p').filter(function () {
