@@ -81,14 +81,19 @@ $('#editor-dropdown')
         }
     },
     // Redefine the button pane
-    btns: ['viewHTML',
-            '|', 'formatting',
-            '|', 'btnGrp-semantic',
-            '|', 'link',
-            '|', 'image',
-            '|', 'btnGrp-justify',
-            '|', 'btnGrp-lists',
-            '|', 'horizontalRule'],
+    btns: [
+        ['viewHTML'],
+        ['formatting'],
+        ['strong', 'em', 'del'],
+        ['superscript', 'subscript'],
+        ['link'],
+        ['image'], // Our fresh created dropdown
+        ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+        ['unorderedList', 'orderedList'],
+        ['horizontalRule'],
+        ['removeformat'],
+        ['fullscreen']
+    ],
     plugins: {
         // Add imagur parameters to upload plugin for demo purposes
         upload: {
@@ -130,7 +135,7 @@ $('#editor-dropdown')
 <script>
     loadStyle('dist/ui/trumbowyg.css');
     loadScript('dist/trumbowyg.js', 'Import Trumbowyg');
-    loadScript('dist/plugins/upload/trumbowyg.upload.js', 'Import all plugin you want AFTER importing jQuery and Trumbowyg');
+    loadScript('dist/plugins/upload/trumbowyg.upload.js', 'Import all plugins you want AFTER importing jQuery and Trumbowyg');
 </script>
 <script src="../js/runExampleCode.js"></script>
 <script src="../js/highlight.js"></script>
